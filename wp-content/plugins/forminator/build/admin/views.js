@@ -1,0 +1,1 @@
+!function(n){formintorjs.define(["admin/dashboard","admin/settings-page","admin/popups","admin/addons/addons","admin/settings","admin/polls/polls","admin/quizzes/quizzes"],function(n,s,i,a,d,e,o){return{Views:{Dashboard:n,SettingsPage:s,Popups:i,Settings:d,Polls:e,Quizzes:o}}})}(jQuery);

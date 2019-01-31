@@ -1,0 +1,159 @@
+@include body-class(true) {
+
+	.fui-demo {
+
+		* {
+			cursor: default;
+			pointer-events: none;
+		}
+
+		&--default,
+		&--flat,
+		&--bold,
+		&--material {
+
+			label {
+				display: block;
+				color: $fui-demo--label-color;
+				font-size: $fui-demo--label-font-size;
+				line-height: $fui-demo--label-line-height;
+				font-family: $font;
+				font-weight: $fui-demo--label-font-weight;
+				letter-spacing: 0;
+			}
+
+			input {
+				width: 100%;
+				height: $fui-demo--input-height;
+				display: block;
+				margin: 0;
+				outline: none;
+				box-shadow: none;
+				color: $fui-demo--input-color;
+				font-size: $fui-demo--input-font-size;
+				line-height: $fui-demo--input-line-height;
+				font-family: $font;
+				font-weight: $fui-demo--input-font-weight;
+				letter-spacing: $font--letter-spacing;
+
+				+ label,
+				+ button {
+					margin-top: 20px;
+				}
+			}
+
+			button {
+				width: auto;
+				min-width: $fui-demo--button-min-width;
+				display: block;
+				margin: 0;
+				border: 0;
+				background-color: $fui-demo--button-background;
+				color: $fui-demo--button-color;
+				text-align: center;
+				font-family: $font;
+				font-size: $fui-demo--button-font-size;
+				line-height: $fui-demo--button-line-height;
+				text-transform: none;
+			}
+		}
+
+		&--default,
+		&--flat,
+		&--bold {
+
+			input {
+				background-color: $fui-demo--input-background;
+
+				&::placeholder {
+					color: $fui-demo--input-placeholder;
+				}
+			}
+		}
+
+		&--default,
+		&--bold {
+
+			input {
+				border-style: solid;
+				border-color: $fui-demo--input-border-color;
+			}
+		}
+
+		&--default {
+
+			input {
+				padding: #{($fui-demo--input-height - $fui-demo--input-line-height - ($fui-demo--default-border-width * 2)) / 2} #{$fui-demo--default-padding - 1px};
+				border-width: $fui-demo--default-border-width;
+				border-radius: $fui-demo--default-border-radius;
+			}
+
+			button {
+				padding: $fui-demo--default-padding;
+				border-radius: $fui-demo--default-border-radius;
+			}
+		}
+
+		&--flat {
+
+			input {
+				padding: $fui-demo--flat-padding;
+				border: 0;
+				border-radius: 0;
+			}
+
+			button {
+				padding: $fui-demo--flat-padding;
+				border-radius: 0;
+			}
+		}
+
+		&--bold {
+
+			input {
+				padding: #{($fui-demo--input-height - $fui-demo--input-line-height - ($fui-demo--bold-border-width * 2)) / 2} #{$fui-demo--bold-padding - 1px};
+				border-width: $fui-demo--bold-border-width;
+				border-radius: 0;
+			}
+
+			button {
+				padding: 12px;
+				border-radius: 0;
+			}
+		}
+
+		&--material {
+
+			input {
+				padding: $fui-demo--material-padding 0 #{$fui-demo--material-padding - $fui-demo--material-border-width};
+				border: 0;
+				border-bottom: $fui-demo--material-border-width solid $fui-demo--input-border-color;
+				background-color: transparent;
+
+				&::placeholder {
+					color: transparent;
+				}
+			}
+
+			button {
+				padding: $fui-demo--material-padding;
+				border-radius: $fui-demo--material-border-radius;
+			}
+
+			.fui-is_empty {
+				margin-bottom: 20px;
+
+				label {
+					transform: translateY(#{$fui-demo--input-height - ($fui-demo--material-padding - $fui-demo--material-border-width)});
+					color: $fui-demo--input-placeholder;
+					font-size: $fui-demo--input-font-size;
+					font-weight: $fui-demo--input-font-weight;
+				}
+			}
+
+			.fui-is_filled {
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
