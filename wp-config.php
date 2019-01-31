@@ -26,7 +26,7 @@ define('DB_NAME', 'techofes');
 define('DB_USER', 'root');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'max3550');
+define('DB_PASSWORD', '');
 
 /** MySQL hostname */
 define('DB_HOST', '127.0.0.1');
